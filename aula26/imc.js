@@ -1,19 +1,38 @@
-let peso;
-let altura;
-const IMC = peso/(altura*altura)
+//Capturar evento de submit do formulário
+const form = document.querySelector('#formulario')
 
-if (IMC <= 18.5 ){
-    console.log('Abaixo do peso!')
-} else if (IMC >= 18.5 && IMC <= 24.9){
-    console.log('Peso Normal!')
-} else if (IMC >= 25 && IMC <= 29.9){
-    console.log('Sobrepeso!')
-} else if (IMC >= 30 && IMC <= 34.9){
-    console.log('Obesidade grau 1!')
-} else if (IMC >= 35 && IMC <= 39.9){
-    console.log('Obesidade grau 2!')
-    } else if (IMC > 40){
-        console.log('Obesidade grau 3!')
-    } else {
-        console.log('Nada consta!')
+form.addEventListener('submit', function(e){
+    e.preventDefault()
+    const inputPeso = e.target.querySelector('#peso') 
+    const inputAltura = e.target.querySelector('#altura') 
+    const peso = Number(inputPeso.value)
+    const altura = Number(inputAltura.value)
+
+    if (!peso){
+        setResultado('Peso inválido', false)
+        return;
     }
+
+});
+    if(!altura){
+      setResultado('Altura inválida', false) 
+      return; 
+    }
+    console.log('Cheguei aqui...');
+
+
+function criaP(){
+    const p = document.createElement('p')
+    return p;
+   
+}
+
+function setResultado (msg, isValid){
+    const resultado = document.querySelector('#resultado');
+    resultado.innerHTML = '';
+    const p = criaP();
+}
+
+
+
+
