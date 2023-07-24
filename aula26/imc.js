@@ -6,15 +6,15 @@ form.addEventListener('submit', function(e){
     const inputPeso = e.target.querySelector('#peso') 
     const inputAltura = e.target.querySelector('#altura') 
     const peso = Number(inputPeso.value)
-    const altura = Number(inputAltura.value)
+    const altura = Number(inputAltura.value)});
 
     if (!peso){
         setResultado('Peso inválido', false)
         return;
     }
+        // Aqui sempre que o peso for inválido ele retornará falso e vai parar, por isso se usa return.
 
-});
-    if(!altura){
+    if (!altura){
       setResultado('Altura inválida', false) 
       return; 
     }
@@ -31,6 +31,8 @@ function setResultado (msg, isValid){
     const resultado = document.querySelector('#resultado');
     resultado.innerHTML = '';
     const p = criaP();
+    p.innerHTML = msg;
+    resultado.appendChild(p);
 }
 
 
