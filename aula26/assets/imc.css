@@ -70,7 +70,11 @@ body {
     form button:active {
         background: red ;
     }
-    .paragrafo-resultado{
+    .paragrafo-resultado, .bad {
         background: rgb(6, 146, 88);
         padding: 10px 20px;
+    }
+
+    .bad {
+        background: rgb(235, 40, 40);
     }
